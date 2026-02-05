@@ -28,6 +28,6 @@ window.onload = function() {
         document.getElementById('ergebnis').innerHTML="Ich habe die Zahl erraten.";
         document.getElementById('tipps').innerHTML="Gebrauchte Tipps: " + tipps;
     } else if (limitErreicht) {
-        document.getElementById('ergebnis').innerHTML="Du bist behindert. Ich konnte deine Zahl nicht finden.";
+        document.getElementById('ergebnis').innerHTML="Ich konnte deine Zahl nicht finden.";
     }
 }

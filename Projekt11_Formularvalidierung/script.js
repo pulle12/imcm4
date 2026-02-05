@@ -5,7 +5,7 @@ function login() {
     const passwordResult = validatePassword(passwordInput);
 
     if (usernameResult.valid && passwordResult.valid) {
-        document.getElementById('loginMessage').innerText = "Erfolgreich angemeldet du oaschloch!";
+        document.getElementById('loginMessage').innerText = "Erfolgreich angemeldet du!";
         document.getElementById('loginMessage').hidden = false;
     } else {
         const parts = [];
