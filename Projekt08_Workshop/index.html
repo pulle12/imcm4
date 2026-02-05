@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Verwaltung</title>
+    <meta name="description" content="Ein einfaches Programm, das einen Workshop mit Teilnehmern und Aufgaben verwaltet.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="ueberschrift">Workshop Verwaltung</h1>
+        <h2>Teilnehmer</h2>
+        <input type="text" id="teilnehmerInput" class="inputs" placeholder="Teilnehmer hinzufügen">
+        <br/>
+        <button type="button" class="hinzufuegen" onclick="teilnehmerHinzufuegen()">Hinzufügen</button>
+        <h3>Teilnehmer Set:</h3>
+        <p id="teilnehmerSet"></p>
+        <p id="fehlermeldung1" class="fehlermeldungen"></p>
+        <h2>Aufgaben</h2>
+        <input type="text" id="teilnehmerInputAufgabe" class="inputs" placeholder="Teilnehmer">
+        <input type="text" id="aufgabenInput" class="inputs" placeholder="Aufgabe">
+        <br/>
+        <button type="button" class="hinzufuegen" onclick="aufgabeHinzufuegen()">Hinzufügen</button>
+        <h3>Aufgaben Map:</h3>
+        <p id="aufgabenMap"></p>
+        <p id="fehlermeldung2" class="fehlermeldungen"></p>
+    </div>
+    <script src="script.js" async defer></script>
+</body>
+</html>

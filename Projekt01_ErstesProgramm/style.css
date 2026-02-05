@@ -1,0 +1,23 @@
+#button1 {
+    font-weight: bold;
+    color: black;
+}
+
+#ueberschrift1 {
+    font-weight: bold;
+    color: blue;
+}
+
+#loremipsum {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.light {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.dark {
+    background-color: darkblue;
+    color: lightblue;
+}

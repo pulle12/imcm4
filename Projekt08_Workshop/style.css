@@ -1,0 +1,51 @@
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    color: black;
+}
+
+#ueberschrift {
+    text-align: center;
+    color: black;
+}
+
+.inputs {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.hinzufuegen {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    background-color: blue;
+    color: white;
+    border: 0;
+}
+
+.hinzufuegen:hover {
+    background-color: darkblue;
+    cursor: pointer;
+}
+
+#teilnehmerSet, #aufgabenMap {
+    margin-top: 20px;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.fehlermeldungen {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}

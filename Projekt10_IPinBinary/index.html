@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP-in-binary transformation</title>
+    <meta name="description" content="Ein einfaches Programm, das IP-Adressen in Binärform umwandelt.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IP-Adresse in Binärform umwandeln</h1>
+        <div class="input-group">
+            <input type="text" id="ipInput" placeholder="Geben Sie eine IP-Adresse ein (z.B. 192.168.0.1)">
+            <button id="convertButton" onclick="transformate()">Umwandeln</button>
+            <button class="reset-btn" onclick="resetForm()">Löschen</button>
+        </div>
+        <h2>Binärform:</h2>
+        <p id="binaryOutput"></p>
+    </div>
+    <script src="script.js" async defer></script>
+</body>
+</html>
