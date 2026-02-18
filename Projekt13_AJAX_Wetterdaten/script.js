@@ -8,7 +8,7 @@ function getWeather() {
 
     const xhttp = new XMLHttpRequest();
     const url =
-        'http://api.weatherstack.com/current?access_key=d1fc09929376b59db399c768c0c4c94c&units=m&query=' +
+        'http://api.weatherstack.com/current?access_key=apikey&units=m&query=' +
         encodeURIComponent(locationInput);
 
     xhttp.onload = function () {
@@ -29,6 +29,9 @@ function getWeather() {
                 document.getElementById('weatherHeadline').innerText = data.location.name;
                 document.getElementById('weatherDescription').innerText = data.current.weather_descriptions[0];
                 document.getElementById('weatherSpeed').innerText = 'Windgeschwindigkeit: ' + data.current.wind_speed + ' km/h';
+                if(document.getElementById('weatherIcon')) {
+                    document.getElementById('weatherIcon').style.display = 'block';
+                }
             } catch (e) {
                 document.getElementById('errorMessage').innerText =
                     'Antwort konnte nicht gelesen werden.';
