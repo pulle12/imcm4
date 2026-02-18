@@ -8,7 +8,7 @@ function getWeather() {
 
     const xhttp = new XMLHttpRequest();
     const url =
-        'http://api.weatherstack.com/current?access_key=DEIN_API_KEY&units=m&query=' +
+        'http://api.weatherstack.com/current?access_key=d1fc09929376b59db399c768c0c4c94c&units=m&query=' +
         encodeURIComponent(locationInput);
 
     xhttp.onload = function () {
@@ -17,25 +17,30 @@ function getWeather() {
                 const data = JSON.parse(xhttp.responseText);
 
                 if (data.error) {
-                    document.getElementById('weatherTemperature').innerText =
+                    document.getElementById('errorMessage').innerText =
                         'Fehler: ' + data.error.info;
                     return;
                 }
 
                 document.getElementById('weatherTemperature').innerText =
                     data.current.temperature + ' °C in ' + data.location.name;
+                document.getElementById('weatherIcon').src =
+                    data.current.weather_icons[0];
+                document.getElementById('weatherHeadline').innerText = data.location.name;
+                document.getElementById('weatherDescription').innerText = data.current.weather_descriptions[0];
+                document.getElementById('weatherSpeed').innerText = 'Windgeschwindigkeit: ' + data.current.wind_speed + ' km/h';
             } catch (e) {
-                document.getElementById('weatherTemperature').innerText =
+                document.getElementById('errorMessage').innerText =
                     'Antwort konnte nicht gelesen werden.';
             }
         } else {
-            document.getElementById('weatherTemperature').innerText =
+            document.getElementById('errorMessage').innerText =
                 'HTTP-Fehler: ' + xhttp.status;
         }
     };
 
     xhttp.onerror = function () {
-        document.getElementById('weatherTemperature').innerText =
+        document.getElementById('errorMessage').innerText =
             'Netzwerkfehler beim Abrufen der Wetterdaten.';
     };
 
