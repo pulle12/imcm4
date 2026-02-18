@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularvalidierung</title>
-    <meta name="description" content="Ein einfaches Programm, das IP-Adressen in Binärform umwandelt.">
+    <title>Wetterdaten</title>
+    <meta name="description" content="Ein einfaches Programm, das Wetterdaten abruft.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Formularvalidierung</h1>
-        <label for="usernameInput">Benutzername:</label></br>
-        <input type="text" id="usernameInput" placeholder="Geben Sie einen Benutzernamen ein..."></br>
-        <label for="passwordInput">Passwort:</label></br>
-        <input type="text" id="passwordInput" placeholder="Geben Sie ein Passwort ein..."></br>
-        <button id="convertButton" onclick="login()">Anmelden</button>
-        <p id="loginMessage" hidden></p>
+        <h1>Wetterdaten</h1>
+        <label for="locationInput">Gib bitte eine/n Stadt/Ort ein:</label></br>
+        <input type="text" id="locationInput" placeholder="Geben Sie eine/n Stadt/Ort ein..."></br>
+        <button id="weatherButton" onclick="getWeather()">Wetterdaten anzeigen</button>
+        <p id="errorMessage" hidden></p>
     </div>
     <script src="script.js" async defer></script>
 </body>
