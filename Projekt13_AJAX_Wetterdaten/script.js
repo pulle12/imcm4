@@ -9,12 +9,12 @@ function getWeather() {
     const xhttp = new XMLHttpRequest();
     const url =
         'http://api.weatherstack.com/current?access_key=meinapikey&units=m&query=' +
-        encodeURIComponent(locationInput);
+        encodeURIComponent(locationInput); //URL bleibt immer gültig (Sonderzeichen und so werden kodiert)
 
-    xhttp.onload = function () {
+    xhttp.onload = function () { // wird automatisch aufgerufen, wenn die Antwort vom Server da ist
         if (xhttp.status === 200) {
             try {
-                const data = JSON.parse(xhttp.responseText);
+                const data = JSON.parse(xhttp.responseText); //wandelt den JSON-Text den der Server mir geschickt hat in ein JavaScript-Objekt um
 
                 if (data.error) {
                     document.getElementById('errorMessage').innerText =
@@ -29,7 +29,7 @@ function getWeather() {
                 document.getElementById('weatherHeadline').innerText = data.location.name;
                 document.getElementById('weatherDescription').innerText = data.current.weather_descriptions[0];
                 document.getElementById('weatherSpeed').innerText = 'Windgeschwindigkeit: ' + data.current.wind_speed + ' km/h';
-                if(document.getElementById('weatherIcon')) {
+                if(document.getElementById('weatherIcon')) { //Icon nur anzeigen, wenn es auch wirklich da ist
                     document.getElementById('weatherIcon').style.display = 'block';
                 }
             } catch (e) {
