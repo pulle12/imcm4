@@ -8,7 +8,7 @@ function getWeather() {
 
     const xhttp = new XMLHttpRequest();
     const url =
-        'http://api.weatherstack.com/current?access_key=apikey&units=m&query=' +
+        'http://api.weatherstack.com/current?access_key=meinapikey&units=m&query=' +
         encodeURIComponent(locationInput);
 
     xhttp.onload = function () {
@@ -47,7 +47,6 @@ function getWeather() {
             'Netzwerkfehler beim Abrufen der Wetterdaten.';
     };
 
-    // Anfrage senden
     xhttp.open('GET', url);
     xhttp.send();
 }
