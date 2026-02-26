@@ -48,5 +48,6 @@ function getWeather() {
     };
 
     xhttp.open('GET', url);
+    xhttp.setRequestHeader("Accept", "application/json");
     xhttp.send();
 }
