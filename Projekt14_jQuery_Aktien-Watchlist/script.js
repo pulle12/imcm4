@@ -6,7 +6,7 @@ $(document).ready(function () {
         const apiKey = '';
         const apiUrl = `https://api.marketstack.com/v2/eod/latest?access_key=${apiKey}&symbols=${stock}`;
         $('#searchHistory').append(`<li>${stock}</li>`);
-        $('#loadingText').html('<p>Lade Wetterdaten...</p>');
+        $('#loadingText').html('<p>Lade Aktienkursdaten...</p>');
 
         $.get(apiUrl, function (data) {
             const first = data.data[0];
@@ -19,7 +19,7 @@ $(document).ready(function () {
                 <td>${stockPrice}</td>
                 <td><button class="remove-stock">Entfernen</button></td>
             `);
-            $('#loadingText').html();
+            $('#loadingText').html("");
         }).fail(function () {
             $('#loadingText').html('<p style="color: red;">Netzwerkfehler. Konnte die API nicht erreichen.</p>');
         }).always(function () {
