@@ -1,5 +1,5 @@
-$(function () {
-
+function loadPrices() {
+    // Hilfsfunktion: eine Zeile in die Tabelle einfügen
     function addStockRow(name, price) {
         const rowHtml = `
             <tr>
@@ -8,26 +8,37 @@ $(function () {
                 <td><button class="remove-stock">Entfernen</button></td>
             </tr>
         `;
-
         $("#stock-table-body").append(rowHtml);
     }
 
-    const stockInput = document.getElementById('stockInput').value.trim();
+    const symbols = $("#stockInput").val().trim();
 
-    const apiResult = new XMLHttpRequest();
-    const url =
-        'http://api.weatherstack.com/current?access_key=meinapikey&symbols=' +
-        encodeURIComponent(stockInput);
+    if (!symbols) {
+        alert("Bitte mindestens ein Aktiensymbol eingeben.");
+        return;
+    }
 
-    apiResult.open('GET', url);
-    apiResult.setRequestHeader("Accept", "application/json");
-    apiResult.send();
+    $.ajax({
+        url: "DEINE_API_URL?symbols=" + encodeURIComponent(symbols),
+        method: "GET",
+        dataType: "json",
+        success: function (response) {
+            
+            if (!response.stocks) {
+                console.error("Unerwartetes API-Format:", response);
+                return;
+            }
 
-    apiResult.forEach(stock => {
-        addStockRow(stock.name, stock.price);
+            response.stocks.forEach(function (stock) {
+                addStockRow(stock.name, stock.price);
+            });
+        },
+        error: function (xhr, status, error) {
+            console.error("API-Request fehlgeschlagen:", status, error);
+        }
     });
 
     $("#stock-table-body").on("click", ".remove-stock", function () {
         $(this).closest("tr").remove();
     });
-});
+}
