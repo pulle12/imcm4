@@ -13,7 +13,7 @@ $(document).ready(function () {
             const stockName = first.symbol;
             const stockPrice = first.close;
             
-            $('#stock-table-body').html(`
+            $('#stock-table-body').append(`
                 <tr>
                 <td>${stockName}</td>
                 <td>${stockPrice}</td>
