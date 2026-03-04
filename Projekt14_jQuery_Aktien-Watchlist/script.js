@@ -1,3 +1,14 @@
+$(document).ready(function () {
+    $('#stockInput').val('');
+
+    $('#addStockButton').click(function () {
+        const stock = $('stockInput').val();
+        const api_key = 'APIKEY';
+    });
+});
+
+
+
 function loadPrices() {
     // Hilfsfunktion: eine Zeile in die Tabelle einfügen
     function addStockRow(name, price) {
