@@ -7,26 +7,28 @@
     <meta name="description" content="Ein einfaches Programm, das Wetterdaten abruft.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-4.0.0.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <input type="text" id="stockInput" placeholder="Aktienname eingeben">
-        <button id="addStockButton">Hinzufügen</button>
         <h1>Aktien-Watchlist</h1>
+        <input type="text" id="stockInput" placeholder="Symbol (z.B. AAPL)">
+        <button id="addStockButton">Hinzufügen</button>
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Preis</th>
-                    <th></th>
+                    <th>Aktie</th>
+                    <th>EOD Preis (USD)</th>
+                    <th>Aktion</th>
                 </tr>
             </thead>
             <tbody id="stock-table-body">
                 
             </tbody>
         </table>
-        
+        <div id="loadingText"></div>
+        <h2>Dein Suchverlauf</h2>
+        <ul id="searchHistory"></ul>
     </div>
     <script src="script.js" async defer></script>
 </body>

@@ -2,8 +2,27 @@ $(document).ready(function () {
     $('#stockInput').val('');
 
     $('#addStockButton').click(function () {
-        const stock = $('stockInput').val();
-        const api_key = 'APIKEY';
+        const stock = $('#stockInput').val();
+        const apiKey = 'APIKEY';
+        const apiUrl = `https://api.marketstack.com/v2/eod/latest?access_key=${apiKey}&symbols=${stock}`;
+        $('#searchHistory').append(`<li>${stock}</li>`);
+        $('#loadingText').html('<p>Lade Wetterdaten...</p>');
+
+        $.get(apiUrl, function (data) {
+            const stockName = data.data.name;
+            const stockPrice = data.data.close;
+            
+            $('#stock-table-body').html(`
+                <tr>
+                <td>${stockName}</td>
+                <td>${stockPrice}</td>
+                <td><button id="">Entfernen</button></td>
+            `);
+        }).fail(function () {
+            $('#loadingText').html('<p style="color: red;">Netzwerkfehler. Konnte die API nicht erreichen.</p>');
+        }).always(function () {
+            console.log('API-Anfrage abgeschlossen.');
+        });
     });
 });
 
