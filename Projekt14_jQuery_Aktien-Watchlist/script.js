@@ -18,6 +18,7 @@ $(document).ready(function () {
                 <td>${stockName}</td>
                 <td>${stockPrice}</td>
                 <td><button class="remove-stock">Entfernen</button></td>
+                </tr>
             `);
             $('#loadingText').html("");
         }).fail(function () {
