@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wetterdaten 2.0</title>
+    <meta name="description" content="Ein einfaches Programm, das Wetterdaten abruft.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wetterdaten 2.0</h1>
+        <label for="locationInput">Gib bitte eine/n Stadt/Ort ein:</label></br>
+        <input type="text" id="locationInput" placeholder="Geben Sie eine/n Stadt/Ort ein..."></br>
+        <button id="weatherButton" onclick="getWeather()">Wetterdaten anzeigen</button>
+        <p id="errorMessage"></p>
+        <div>
+            <h2 id="weatherHeadline"></h2>
+            <img id="weatherIcon">
+            <p id="weatherTemperature"></p>
+            <p id="weatherDescription"></p>
+            <p id="weatherSpeed"></p>
+        </div>
+    </div>
+    <script src="../Projekt14_jQuery_Aktien-Watchlist/script.js" async defer></script>
+    <script src="script.js" async defer></script>
+</body>
+</html>
