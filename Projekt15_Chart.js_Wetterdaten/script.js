@@ -6,6 +6,7 @@ $(document).ready(function () {
     const cityTemperatures = [];
     
     $('#locationInput').val('');
+    document.querySelector('#chartKastl').classList.add('hidden');
 
     // Auf Wetterdaten aus dem alten getWeather-Skript reagieren
     window.addEventListener('weatherDataReady', function (event) {
@@ -18,6 +19,7 @@ $(document).ready(function () {
         // Diagramme zeichnen/aktualisieren
         renderBarChart();
         renderPieChart(locationName, humidity);
+        document.querySelector('#chartKastl').classList.remove('hidden');
     });
 
     // Funktion 1: Säulendiagramm (Temperaturverlauf aller Suchen)

@@ -7,7 +7,7 @@ function getWeather() {
     }
 
     const xhttp = new XMLHttpRequest();
-    const key = 'meinkey'; // API-Key von Weatherstack
+    const key = '7d01514a87fbd14e6cfee3bfd604cdcc'; // API-Key von Weatherstack
     const url = 'http://api.weatherstack.com/current?access_key=' + key + '&units=m&query=' +
         encodeURIComponent(locationInput); //URL bleibt immer gültig (Sonderzeichen und so werden kodiert)
     document.getElementById('searchHistory').appendChild(document.createElement('li')).textContent = locationInput;
