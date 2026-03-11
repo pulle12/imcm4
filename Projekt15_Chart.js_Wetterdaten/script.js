@@ -17,9 +17,9 @@ $(document).ready(function () {
         cityTemperatures.push(temperature);
 
         // Diagramme zeichnen/aktualisieren
+        document.querySelector('#chartKastl').classList.remove('hidden');
         renderBarChart();
         renderPieChart(locationName, humidity);
-        document.querySelector('#chartKastl').classList.remove('hidden');
     });
 
     // Funktion 1: Säulendiagramm (Temperaturverlauf aller Suchen)
