@@ -7,8 +7,9 @@ function getWeather() {
     }
 
     const xhttp = new XMLHttpRequest();
+    const key="meinkey";
     const url =
-        'http://api.weatherstack.com/current?access_key=meinapikey&units=m&query=' +
+        'http://api.weatherstack.com/current?access_key=' + key + '&units=m&query=' +
         encodeURIComponent(locationInput); //URL bleibt immer gültig (Sonderzeichen und so werden kodiert)
 
     xhttp.onload = function () { // wird automatisch aufgerufen, wenn die Antwort vom Server da ist
