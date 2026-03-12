@@ -1,10 +1,17 @@
 $(document).ready(function () {
+    let barChart = null;
+    let pieChart = null;
+
+    const stocks = [];
+    const datums = [];
+
     $('#stockInput').val('');
 
     $('#addStockButton').click(function () {
         const stock = $('#stockInput').val();
         const apiKey = '';
-        const apiUrl = `https://api.marketstack.com/v2/eod/latest?access_key=${apiKey}&symbols=${stock}`;
+
+        const apiUrl = `https://api.marketstack.com/v2/tickers/${stock}/eod?limit=30&access_key=${apiKey}`;
         $('#searchHistory').append(`<li>${stock}</li>`);
         $('#loadingText').html('<p>Lade Aktienkursdaten...</p>');
 
@@ -12,6 +19,13 @@ $(document).ready(function () {
             const first = data.data[0];
             const stockName = first.symbol;
             const stockPrice = first.close;
+
+            for(let i = 0; i < 30; i++) {
+                value = data.eod[i].close;
+                datum = data.eod[i].date;
+                stocks.push(value);
+                datums.push(datum);
+            }
             
             $('#stock-table-body').append(`
                 <tr>
@@ -21,6 +35,8 @@ $(document).ready(function () {
                 </tr>
             `);
             $('#loadingText').html("");
+
+            renderLineChart();
         }).fail(function () {
             $('#loadingText').html('<p style="color: red;">Netzwerkfehler. Konnte die API nicht erreichen.</p>');
         }).always(function () {
@@ -33,3 +49,27 @@ $(document).ready(function () {
 $('#stock-table-body').on('click', '.remove-stock', function () {
     $(this).closest('tr').remove();
 });
+
+    function renderLineChart() {
+        if (renderLineChart) {
+            renderLineChart.destroy(); // Alten Chart zerstören
+        }
+
+        renderLineChart = new Chart("lineGraph", { // id des Canvas-Elements in der HTML
+            type: 'line',
+            data: {
+                labels: datums, // X-Achse: Die Datums
+                datasets: [{
+                    backgroundColor:"rgba(0,0,255,1.0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: stocks
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    }
