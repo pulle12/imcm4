@@ -2,40 +2,12 @@ let lineChart = null;
 let stocks = [];
 let datums = [];
 
-function renderLineChart() {
-    if (lineChart) {
-        lineChart.destroy();
-    }
-
-    lineChart = new Chart(document.getElementById('lineGraph'), {
-        type: 'line',
-        data: {
-            labels: datums,
-            datasets: [{
-                label: 'Schlusskurs',
-                backgroundColor: 'rgba(0, 123, 255, 0.2)',
-                borderColor: 'rgba(0, 123, 255, 1)',
-                data: stocks,
-                tension: 0.2
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: false
-                }
-            }
-        }
-    });
-}
-
 $(document).ready(function () {
     $('#stockInput').val('');
 
     $('#addStockButton').click(function () {
         const stock = $('#stockInput').val().trim().toUpperCase();
-        const apiKey = '';
+        const apiKey = '923f5e085aa50b51d4e83b549b07b157';
 
         if (!stock) {
             $('#loadingText').html('<p style="color: red;">Bitte gib ein Aktiensymbol ein.</p>');
@@ -104,3 +76,31 @@ $(document).ready(function () {
         $(this).closest('tr').remove();
     });
 });
+
+function renderLineChart() {
+    if (lineChart) {
+        lineChart.destroy();
+    }
+
+    lineChart = new Chart(document.getElementById('lineGraph'), {
+        type: 'line',
+        data: {
+            labels: datums,
+            datasets: [{
+                label: 'Schlusskurs',
+                backgroundColor: 'rgba(0, 123, 255, 0.2)',
+                borderColor: 'rgba(0, 123, 255, 1)',
+                data: stocks,
+                tension: 0.2
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: false
+                }
+            }
+        }
+    });
+}
