@@ -43,6 +43,7 @@ $(document).ready(function () {
                 datums.push(entries[i].date.slice(0, 10));
             }
 
+            // das mache ich weil ich oben mit DESC die neueren hole aber dann alles verkehrt hätte
             stocks.reverse();
             datums.reverse();
 
