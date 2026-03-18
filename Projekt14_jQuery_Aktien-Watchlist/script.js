@@ -19,7 +19,7 @@ $(document).ready(function () {
             return;
         }
 
-        const apiUrl = `https://api.marketstack.com/v1/eod?access_key=${apiKey}&symbols=${stock}&limit=30&sort=ASC`;
+        const apiUrl = `https://api.marketstack.com/v1/eod?access_key=${apiKey}&symbols=${stock}&limit=30&sort=DESC`;
         $('#searchHistory').append(`<li>${stock}</li>`);
         $('#loadingText').html('<p>Lade Aktienkursdaten...</p>');
 
@@ -42,6 +42,9 @@ $(document).ready(function () {
                 stocks.push(entries[i].close);
                 datums.push(entries[i].date.slice(0, 10));
             }
+
+            stocks.reverse();
+            datums.reverse();
 
             $('#stock-table-body').append(`
                 <tr>
