@@ -43,7 +43,7 @@ $(document).ready(function () {
                 datums.push(entries[i].date.slice(0, 10));
             }
 
-            // das mache ich weil ich oben mit DESC die neueren hole aber dann alles verkehrt hätte
+            // das mache ich weil ich oben mit DESC die neueren hole aber dann alles verkehrt hätte, ich will im array am anfang die ältesten also links im Graph
             stocks.reverse();
             datums.reverse();
 
