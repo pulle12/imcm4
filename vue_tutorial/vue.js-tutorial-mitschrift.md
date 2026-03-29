@@ -7,10 +7,10 @@ Allgemeine Infos wurden gegeben. HTML, CSS und JavaScript werden vorausgesetzt. 
 
 ### Video 2: Warum sollte man Vue lernen?
 
-###### Kurzbeschreibung
+#### Kurzbeschreibung
 - Vue ist ein **progressives Framework**.
 
-###### Popularität und Community (2024)
+#### Popularität und Community (2024)
 Quelle: Stack Overflow Survey und State of JS
 
 - viert-beliebtestes Frontend-JavaScript-Framework
@@ -18,11 +18,11 @@ Quelle: Stack Overflow Survey und State of JS
 - Platz 2 bei Nutzung, Bekanntheit und positiver Wahrnehmung
 - Platz 3 bei Interesse und Retention
 
-###### GitHub-Statistiken
+#### GitHub-Statistiken
 - 208.000 Stars
 - 33.700 Forks
 
-###### Unternehmen, die Vue nutzen
+#### Unternehmen, die Vue nutzen
 - Adobe
 - Nintendo
 - Alibaba
@@ -33,13 +33,13 @@ Quelle: Stack Overflow Survey und State of JS
 - Trustpilot
 - und viele weitere
 
-###### npm-Downloads
+#### npm-Downloads
 - 5 bis 6 Millionen Downloads pro Woche
 
 ### Video 3: Erste Vue App erstellen
-###### Aufbau des Tutorials
+#### Aufbau des Tutorials
 Das Video bzw. Audio läuft im Hintergrund, links ist der Code und die Ordnerstruktur und rechts sieht man den Browser mit der laufenden App.
-###### Videoinhalte
+#### Videoinhalte
 Es wird mit CDN das vue.js-Skript eingebunden.
 Funktionsweise von vue: Es hängt sich an ein HTML-Element (hier: `#app`) und steuert dessen Inhalt. Wichtig sind die doppelten geschweiften Klammern `{{}}`, die als Platzhalter für Daten dienen.
 
