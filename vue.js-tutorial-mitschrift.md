@@ -8,10 +8,10 @@ Allgemeine Infos wurden gegeben. HTML, CSS und JavaScript werden vorausgesetzt. 
 ### Kurzbeschreibung
 - Vue ist ein **progressives Framework**.
 
-### Popularitaet und Community (2024)
+### Popularität und Community (2024)
 Quelle: Stack Overflow Survey und State of JS
 
-- 4. beliebtestes Frontend-JavaScript-Framework
+- viert-beliebtestes Frontend-JavaScript-Framework
 - 60,2 % Admiration Rating
 - Platz 2 bei Nutzung, Bekanntheit und positiver Wahrnehmung
 - Platz 3 bei Interesse und Retention
@@ -37,18 +37,28 @@ Quelle: Stack Overflow Survey und State of JS
 ## Video 3: Erste Vue App erstellen
 ### Aufbau des Tutorials
 Das Video bzw. Audio läuft im Hintergrund, links ist der Code und die Ordnerstruktur und rechts sieht man den Browser mit der laufenden App.
+### Videoinhalte
 Es wird mit CDN das vue.js-Skript eingebunden.
 Funktionsweise von vue: Es hängt sich an ein HTML-Element (hier: `#app`) und steuert dessen Inhalt. Wichtig sind die doppelten geschweiften Klammern `{{}}`, die als Platzhalter für Daten dienen.
-In HTML: Statt `world`, wird `{{name}}` geschrieben.
+
+**Konzepte:**
+
+In HTML: 
+- Im Head wird das Vue.js-Skript eingebunden.
+- Im Body wird ein div mit der ID `app` erstellt, das als Mounting Point dient.
+- Statt `world`, wird `{{name}}` geschrieben.
+
 In JavaScript: 
 - Mit `const {createApp, ref} = Vue` wird die createApp-Funktion und die ref-Funktion aus dem Vue-Objekt extrahiert. `createApp` wird verwendet, um eine neue Vue-Anwendung zu erstellen, und `ref` wird verwendet, um reaktive Daten zu erstellen.
-- `createApp({ ... }).mount('#app')` erstellt eine neue Vue-Anwendung mit den angegebenen Optionen und mountet sie an das HTML-Element mit der ID `app`. Als Inhalt wird setup() aufgerufen und die const name die wir in HTML brauchen, definiert.
+- `createApp({ ... }).mount('#app')` erstellt eine neue Vue-Anwendung mit den angegebenen Optionen und mountet sie an das HTML-Element mit der ID `app`. Als Inhalt wird setup() aufgerufen und die const name die wir in HTML brauchen, definiert und dann zurückgegeben.
+
 Ich erweiterte das Testskript um eine weitere Variable `test` und gab ihr den Wert "servus". Es funktionierte.
 
 ## Video 4: Erste Vue App erstellen V2
 Man bekommt eine Aufgabe gestellt, wo man die 404-Page mit Vue verändern soll, sodass man alle 4 Tags hat.
 Die Aufgabenstellung wird als HTML-Kommentar eingefügt. Wenn das zu schwer ist, bekommt man noch eine `hint.md` zur Verfügung gestellt, die die exakte Syntax enthält.
-Ich versuche es ohne hint in folgendem Ablauf: 
+
+Ich machte es ohne hint in folgendem Ablauf: 
 - Vue CDN integrieren
 - div mit id app erstellen
 - neuen script Teil unterhalb des divs erstellen und alles importieren
@@ -56,8 +66,8 @@ Ich versuche es ohne hint in folgendem Ablauf:
 - ref variablen erstellen und zurückgeben
 - Platzhalter in HTML einfügen
 
-Fehler: Anführungszeichen bei der ID in HTML und JS vergessen und keinen neuen Emoji in span eingefügt.
+**Fehler:** Anführungszeichen bei der ID in HTML und JS vergessen und keinen neuen Emoji in span eingefügt.
 
-Folgendes fiel mir auf: der Cursor im interaktiven Editor passt gar nicht mit meinem Mauszeiger überein, was die Übersicht erschwert. Mit der Zeit ging es komischerweise immer besser, weil ich draufkam, dass ich trotzdem dort bin, wo ich will, wenn ich dort hinklicke.
+**Folgendes fiel mir auf:** der Cursor im interaktiven Editor passt gar nicht mit meinem Mauszeiger überein, was die Übersicht erschwert. Mit der Zeit ging es komischerweise immer besser, weil ich draufkam, dass ich trotzdem dort bin, wo ich will, wenn ich dort hinklicke.
 
 ## Video 5: ...
