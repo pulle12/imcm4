@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $('#addStockButton').click(function () {
         const stock = $('#stockInput').val().trim().toUpperCase();
-        const apiKey = '';
+        const apiKey = 'ed0e81e50b36571dd6d4596562e65420';
 
         if (!stock) {
             $('#loadingText').html('<p style="color: red;">Bitte gib ein Aktiensymbol ein.</p>');
