@@ -70,4 +70,21 @@ Ich machte es ohne hint in folgendem Ablauf:
 
 **Folgendes fiel mir auf:** der Cursor im interaktiven Editor passt gar nicht mit meinem Mauszeiger überein, was die Übersicht erschwert. Mit der Zeit ging es komischerweise immer besser, weil ich draufkam, dass ich trotzdem dort bin, wo ich will, wenn ich dort hinklicke.
 
-## Video 5: ...
+## Video 5: Vue lokal installieren
+
+Bisher haben wir Vue über ein CDN eingebunden, was für kleine Projekte oder zum Lernen ausreichend ist. Für größere Projekte empfiehlt es sich jedoch, Vue lokal zu installieren, um mehr Kontrolle über die Entwicklungsumgebung zu haben und zusätzliche Tools nutzen zu können.
+
+Ablauf auf der Kommandozeile:
+- `npm create vue@latest` - Erstellt ein neues Vue-Projekt mit dem neuesten Vue-CLI.
+- `y` - Bestätigt die Auswahl der Standardeinstellungen für das Projekt.
+- Projektnamen festlegen
+- Package name festlegen
+- Packages und Tools auswählen (z.B. TypeScript, Router, Pinia, ESLint, Prettier)
+- Experimentelle Features auswählen (z.B. Vue DevTools, Auto Import, Vue Router, Pinia, ESLint, Prettier)
+- `cd projektname` - Wechselt in das neu erstellte Projektverzeichnis.
+- `npm install` - Installiert die benötigten Abhängigkeiten für das Projekt.
+- `npm run dev` - Startet den Entwicklungsserver und öffnet die Anwendung im Browser
+
+Optional:
+- `git init && git add -A && git commit -m "Initial commit"` - Initialisiert ein neues Git-Repository, fügt alle Dateien hinzu und erstellt den ersten Commit.
+
