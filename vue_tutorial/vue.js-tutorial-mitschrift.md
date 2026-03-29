@@ -98,3 +98,24 @@ Genau diese Befehle musste ich jetzt selbst im Terminal eingeben, um ein neues V
 Der einzige Unterschied zum Tutorial war nur, dass eine separate Eingabe für die TypeScript-Option kam. 
 
 ## Video 7: Anatomie eines Vue-Projekts
+
+Es gibt einen `src`-Ordner, in dem sich die Hauptdateien befinden:
+- `main.js` - Hier wird die Vue-App erstellt und gemountet.
+- `App.vue` - Die Hauptkomponente der Anwendung, die als Einstiegspunkt dient.
+- `components` - Ein Ordner, in dem weitere Vue-Komponenten erstellt werden können.
+- `assets` - Ein Ordner für statische Dateien wie Bilder, CSS, etc.
+
+Auf der gleichen Ebene wie `src` gibt es weitere wichtige Dateien:
+- `index.html` - Die Haupt-HTML-Datei, die als Vorlage für die Anwendung dient.
+    - Wichtig: Hier wird das `div` mit der ID `app` definiert, an das die Vue-App gemountet wird. Darunter wird auch die `main.js` eingebunden, die die Vue-App erstellt und startet.
+- `public/favicon.ico` - Das Favicon für die Anwendung.
+- `jsconfig.json` - Konfigurationsdatei für zu kompilierende JavaScript-Dateien.
+- `package.json` & `package-lock.json` - Enthält Informationen über das Projekt und die Abhängigkeiten.
+- `vite.config.js` - Konfigurationsdatei für Vite, den Build-Tool, der in Vue-Projekten verwendet wird.
+    Wichtig für später: `alias`
+
+## Video 8: Zusammenfassung / Rückblick von Section 1
+In diesem Abschnitt haben wir die Grundlagen von Vue kennengelernt, einschließlich der Erstellung einer einfachen Vue-App und der lokalen Installation von Vue. Wir haben auch die Struktur eines typischen Vue-Projekts untersucht und die wichtigsten Dateien und Ordner besprochen. In den nächsten Abschnitten werden wir tiefer in die Entwicklung mit Vue eintauchen und weitere Funktionen und Konzepte kennenlernen.
+
+## Video 9: Scrimbassador werden
+Scrimbassador zu werden bedeutet, ein aktives Mitglied der Scrimba-Community zu sein, das anderen Lernenden hilft und die Plattform unterstützt. Es gibt verschiedene Möglichkeiten, Scrimbassador zu werden, wie zum Beispiel durch das Erstellen von Inhalten, das Beantworten von Fragen in der Community oder das Teilen von Erfahrungen auf Social Media. Scrimbassadors erhalten besondere Vorteile (30% revenue share, Free Pro Membership, Swag, Exclusive channel, Badges, Early access) und Anerkennung für ihre Beiträge zur Community.
