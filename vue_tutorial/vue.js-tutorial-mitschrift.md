@@ -66,6 +66,8 @@ Ich machte es ohne hint in folgendem Ablauf:
 - ref variablen erstellen und zurückgeben
 - Platzhalter in HTML einfügen
 
+![alt text](image-1.png)
+
 **Fehler:** Anführungszeichen bei der ID in HTML und JS vergessen und keinen neuen Emoji in span eingefügt.
 
 **Folgendes fiel mir auf:** der Cursor im interaktiven Editor passt gar nicht mit meinem Mauszeiger überein, was die Übersicht erschwert. Mit der Zeit ging es komischerweise immer besser, weil ich draufkam, dass ich trotzdem dort bin, wo ich will, wenn ich dort hinklicke.
@@ -88,3 +90,11 @@ Ablauf auf der Kommandozeile:
 Optional:
 - `git init && git add -A && git commit -m "Initial commit"` - Initialisiert ein neues Git-Repository, fügt alle Dateien hinzu und erstellt den ersten Commit.
 
+## Video 6: Verwenden von `create vue`
+
+Genau diese Befehle musste ich jetzt selbst im Terminal eingeben, um ein neues Vue-Projekt zu erstellen. Es gab einige Fragen, die ich mit den Standardeinstellungen beantwortet habe. Am Ende konnte ich das Projekt erfolgreich starten und im Browser öffnen.
+![alt text](image-2.png)
+
+Der einzige Unterschied zum Tutorial war nur, dass eine separate Eingabe für die TypeScript-Option kam. 
+
+## Video 7: Anatomie eines Vue-Projekts
