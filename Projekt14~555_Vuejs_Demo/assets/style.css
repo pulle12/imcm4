@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.panel {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+input {
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.status-plus {
+    color: green;
+    font-weight: bold;
+}
+
+.status-minus {
+    color: red;
+    font-weight: bold;
+}
+
+.status-neutral {
+    color: gray;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>SimpleTrader Demo</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>📈 SimpleTrader</h1>
+
+        <div class="panel">
+            <!-- Kurzformen für v-bind: und v-on: - market-prices ist ein prop (property) von order-form -->
+            <order-form :market-prices="apiData" @buy-stock="saveOrder">
+            </order-form>
+        </div>
+
+        <div class="panel">
+            <portfolio-view :holdings="myTrades" :current-prices="apiData">
+            </portfolio-view>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="components/OrderForm.js"></script>
+    <script src="components/PortfolioView.js"></script>
+
+    <script>
+        // Vue-Applikation starten und an das div mit der id="app" binden
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
