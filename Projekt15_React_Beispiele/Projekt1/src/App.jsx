@@ -3,25 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import Gallery from './components/Gallery';
 
-function Profile() {
+export default function App() {
   return (
-    <img
-      src="https://react.dev/images/docs/scientists/MK3eW3As.jpg"
-      alt="Katherine Johnson"
-    />
+    <Gallery />
   );
 }
-
-export default function Gallery() {
-  return (
-    <section>
-      <h1>Amazing scientists</h1>
-      <Profile />
-      <Profile />
-      <Profile />
-    </section>
-  );
-}
-
-
+// Bei Note unterhalb vom Bild weitermachen
