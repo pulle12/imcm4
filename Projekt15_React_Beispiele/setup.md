@@ -4,3 +4,5 @@ enter
 React auswählen
 JavaScript auswählen
 yes
+
+später: npm run dev

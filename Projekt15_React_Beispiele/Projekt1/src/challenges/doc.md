@@ -12,4 +12,12 @@ Das Problem war, dass `profile` klein geschrieben war, statt groß (`Profile`).
 ### Challenge 4
 ![alt text](image-3.png)
 
-## 
+## Importing and Exporting Components
+### Challenge 1
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
+
+
+
