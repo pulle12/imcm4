@@ -1,3 +1,8 @@
+# Erklärung der Bedeutung von "Projekt1"
+Der Ordner bzw. das Projekt "Projekt1" enthält die Dateien und Commits aus dem **"React Bootcamp", Abschnitt "Woche 1: Grundlagen der UI und JSX"** im Rahmen des IMCM-Unterrichtes 2025/2026 an der IT-HAK Imst bei Herrn Prof. Riml.
+
+Kurz: **Projekt1 = Woche 1: Grundlagen der UI und JSX**
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
