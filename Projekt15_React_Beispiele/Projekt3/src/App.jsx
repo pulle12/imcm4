@@ -6,7 +6,9 @@ function App() {
   const [produkte, setProdukte] = useState([
     { id: 1, name: 'HP Laptop', image: '/src/assets/image.png', lagerBestand: 0 },
     { id: 2, name: 'High end Gaming PC', image: '/src/assets/image-2.png', lagerBestand: 0 },
-    { id: 3, name: 'Apple iPhone 17 Pro Max', image: '/src/assets/image-3.png', lagerBestand: 0 },
+    { id: 3, name: 'iPhone 17 Pro Max', image: '/src/assets/image-3.png', lagerBestand: 0 },
+    { id: 4, name: 'Espressomaschin', image: '/src/assets/image-4.png', lagerBestand: 0 },
+    { id: 5, name: 'Makita DTW1001Z 18V LXT', image: '/src/assets/image-5.png', lagerBestand: 0 }
   ])
   const [logbuch, setLogbuch] = useState([])
 
@@ -39,6 +41,7 @@ function App() {
 
   return (
     <>
+      <br />
       <section id="center">
         {produkte.map((produkt) => (
           <Product
