@@ -33,9 +33,11 @@ function App() {
   }
 
   const tagesabschluss = () => {
+    const produkteMitBestand = produkte.filter((produkt) => produkt.lagerBestand > 0)
+
     setLogbuch((aktuelleEintraege) => [
       ...aktuelleEintraege,
-      `Tagesabschluss: ${produkte.map((produkt) => `${produkt.name}=${produkt.lagerBestand}`).join(' | ')}`,
+      `Tagesabschluss: ${produkteMitBestand.map((produkt) => `${produkt.name}=${produkt.lagerBestand}`).join(' | ')}`,
     ])
   }
 
